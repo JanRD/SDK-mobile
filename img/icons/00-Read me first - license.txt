@@ -1,0 +1,12 @@
+﻿$(function () {
+    var tabContainers = $('div.mod-nis-prodTabs > div');
+    
+    $('div.mod-nis-prodTabs ul.tabList a').click(function () {
+        tabContainers.hide().filter(this.hash).show();
+        
+        $('div.mod-nis-prodTabs ul.tabList a').removeClass('current');
+        $(this).addClass('current');
+        
+        return false;
+    }).filter(':first').click();
+});
